@@ -50,7 +50,13 @@
         admin_username: "{{ admin_username }}"
         admin_password: "{{ admin_password }}"
         storage_mb: 51200
-
+        subresource:
+        - type: firewallrules
+          name: externalaccess
+       body:
+        properties:
+          startIpAddress: "0.0.0.0"
+          endIpAddress: "255.255.255.255"
     - name: Create instance of MySQL Database
       azure_rm_mysqldatabase:
         resource_group: "{{ resource_group }}"
