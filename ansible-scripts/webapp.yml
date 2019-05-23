@@ -35,7 +35,7 @@
             version: "1.8"
             settings:
               java_container: tomcat
-              java_container_version: 9.0
+              java_container_version: "9.0"
 
     - name: Create MySQL Server
       azure_rm_mysqlserver:
@@ -45,7 +45,7 @@
           name: B_Gen5_1
           tier: Basic
         location: "{{ location }}"
-        version: 5.7
+        version: "5.7"
         enforce_ssl: True
         admin_username: "{{ admin_username }}"
         admin_password: "{{ admin_password }}"
